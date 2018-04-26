@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <el-container>
-      <el-header><top></top></el-header>
+      <el-header><head-top></head-top></el-header>
       <el-container>
         <el-aside width="120px"></el-aside>
         <el-container>
@@ -10,17 +10,19 @@
           </el-main>
         </el-container>
       </el-container>
-      <el-footer></el-footer>
+      <el-footer><foot></foot></el-footer>
     </el-container>
   </div>
 </template>
 
 <script>
-import Top from './components/Top'
+import HeadTop from './components/HeadTop'
+import Foot from './components/Foot'
 export default {
   name: 'App',
   components: {
-    Top
+    HeadTop,
+    Foot
   }
 }
 </script>
@@ -38,6 +40,7 @@ body {
   background-color: #B3C0D1;
   color: #333;
   text-align: center;
+  line-height: 60px;
 }
 
 .el-aside {
