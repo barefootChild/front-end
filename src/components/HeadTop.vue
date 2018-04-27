@@ -1,5 +1,5 @@
 <template>
   <div class="header_container">
-    I am header!
+    A simple website!
   </div>
 </template>

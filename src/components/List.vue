@@ -1,5 +1,5 @@
 <template>
-  <div class="root_page">
+  <div class="list_container">
     {{msg}}
   </div>
 </template>
@@ -7,11 +7,8 @@
 export default {
   data () {
     return {
-      msg: 'I am you!'
+      msg: 'show data list!'
     }
-  },
-  mounted () {
-    console.log(this.message.msg)
   }
 }
 </script>

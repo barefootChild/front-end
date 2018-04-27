@@ -3,7 +3,9 @@
     <el-container>
       <el-header><head-top></head-top></el-header>
       <el-container>
-        <el-aside width="120px"></el-aside>
+        <el-aside width="65px">
+          <sider-bar></sider-bar>
+        </el-aside>
         <el-container>
           <el-main>
             <router-view />
@@ -17,11 +19,13 @@
 
 <script>
 import HeadTop from './components/HeadTop'
+import SiderBar from './components/SiderBar'
 import Foot from './components/Foot'
 export default {
   name: 'App',
   components: {
     HeadTop,
+    SiderBar,
     Foot
   }
 }
@@ -53,7 +57,7 @@ body {
   background-color: #E9EEF3;
   color: #333;
   text-align: center;
-  max-height: calc(100vh - 120px);
+  height: calc(100vh - 120px);
   overflow-y: auto;
 }
 </style>
