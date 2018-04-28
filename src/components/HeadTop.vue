@@ -1,5 +1,5 @@
 <template>
   <div class="header_container">
-    A simple website!
+    待优化的系统
   </div>
 </template>

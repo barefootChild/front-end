@@ -8,10 +8,17 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "server": "node server/app.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "element-ui": "^2.3.6",
+    "koa": "^2.5.1",
+    "koa-body": "^2.5.0",
+    "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.5",
+    "mongodb": "^3.0.7",
     "raven-js": "^3.24.2",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
