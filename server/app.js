@@ -2,12 +2,22 @@ const Koa = require('koa')
 const Router = require('koa-router')
 const koaBody = require('koa-body')
 const cors = require('koa2-cors')
+const { graphqlKoa, graphiqlKoa } = require('apollo-server-koa')
+const { makeExecutableSchema } = require('graphql-tools')
 const { getDb } = require('./mongodb')
+const typeDefs = require('./graphql/types')
+const resolvers = require('./graphql/resolvers')
 
 const app = new Koa()
 const router = new Router()
 app.use(koaBody())
 app.use(cors())
+
+// graphql
+const schema = makeExecutableSchema({typeDefs, resolvers})
+router.post('/graphql', graphqlKoa({ schema }))
+router.get('/graphql', graphqlKoa({ schema }))
+router.get('/graphiql', graphiqlKoa({ endpointURL: '/graphql' }))
 
 router.get('/list', async ctx => {
   const db = await getDb()
